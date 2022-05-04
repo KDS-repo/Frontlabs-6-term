@@ -1,0 +1,45 @@
+html {
+	font-family: Arial;
+}
+
+body {
+	margin: 0;
+}
+
+main {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: purple;
+}
+
+header {
+	flex: 0;
+	margin: 0px;
+	padding: 0px;
+	background-color: pink;
+}
+
+a {
+	text-decoration: none;
+}
+
+article {
+	flex-shrink: 0;
+	flex-grow: 1;
+	padding: 0 5%;
+	background-color: #EFEFEF;
+}
+
+.header-button {
+	display: inline-block;
+	padding: 1em;
+}
+
+.header-button:hover {
+	background-color: #CC99A3;
+}
+
+.header-text {
+	padding: 1em;
+}
