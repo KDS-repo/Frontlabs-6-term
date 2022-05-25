@@ -28,18 +28,47 @@ article {
 	flex-shrink: 0;
 	flex-grow: 1;
 	padding: 0 5%;
-	background-color: #EFEFEF;
+	background-color: white;
 }
 
 .header-button {
 	display: inline-block;
-	padding: 1em;
 }
 
 .header-button:hover {
 	background-color: #CC99A3;
 }
 
+.right-side {
+	position: absolute;
+	right: 0px;
+}
+
 .header-text {
 	padding: 1em;
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.login-item {
+	display: block;
+	margin: 5px;
+	padding: 1em;
+}
+
+.login-form {
+	padding: 20px;
+	background-color: pink;
+}
+
+.formtext {
+	padding: 0;
+}
+
+.hide {
+	display: none;
 }
