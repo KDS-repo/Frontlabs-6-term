@@ -5,6 +5,33 @@
 			EXCERCISE
 		</title>
 		<link rel="stylesheet" href="styles.css">
+		<script>
+		window.addEventListener("load", () => {
+			let dragged = null;
+			
+			document.addEventListener("dragstart", event => {
+				// store a ref. on the dragged elem
+				dragged = event.target;
+			});
+			
+			document.addEventListener("dragover", event => {
+				// prevent default to allow drop
+			  	event.preventDefault();
+			});
+			
+			document.addEventListener("drop", event => {
+				event.preventDefault();
+				console.log("target = " + event.target)
+				if (event.target.className.includes("dropzone")) {
+					let parent = dragged.parentNode
+					console.log("Replacing " + event.target + " with " + dragged)
+					let tmp = parent.replaceChild(dragged.cloneNode(), event.target)
+					parent.replaceChild(tmp, dragged)
+				}
+			});
+		}
+		);
+		</script>
 	</head>
 	<body>
 		<main>
@@ -14,8 +41,7 @@
 				<a href="lecture.html" class="header-button header-text">LECTURES</a>
 				<a href="excercise.html" class="header-button header-text">EXCERCISES</a>
 				<span class="right-side">
-					<a href="login.html" class="header-button header-text">Login</a>
-					<a href="register.html" class="header-button header-text">Register</a>
+					<a href="register.html" class="header-button header-text">Account</a>
 				</span>
 			</header>
 			<article>
@@ -29,10 +55,12 @@
 					<li><input type="radio" name="answer">Answer C</li>
 					<li><input type="radio" name="answer">All of the above</li>
 				</ul>
-				<img draggable="true" style="display: inline; border: 1px solid black; width: 20vw; height: 20vw;">
-				<img draggable="true" style="display: inline; border: 1px solid black; width: 20vw; height: 20vw;">
-				<img draggable="true" style="display: inline; border: 1px solid black; width: 20vw; height: 20vw;">
-				<img draggable="true" style="display: inline; border: 1px solid black; width: 20vw; height: 20vw;">
+				<span class="horizontal">
+					<img class="dropzone answer-images" draggable="true" src="images/ph-a.jpg">
+					<img class="dropzone answer-images" draggable="true" src="images/ph-F.jpg">
+					<img class="dropzone answer-images" draggable="true" src="images/ph-u.jpg">
+					<img class="dropzone answer-images" draggable="true" src="images/ph-p.jpg">
+				</span>
 			</article>
 		</main>
 	</body>

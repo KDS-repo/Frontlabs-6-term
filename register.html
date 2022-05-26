@@ -5,6 +5,27 @@
 			HW1
 		</title>
 		<link rel="stylesheet" href="styles.css">
+		<script>
+		window.addEventListener("load", () => {
+			let btn = document.querySelector("input#login");
+			btn.addEventListener('click', () => {
+				let showing = document.querySelector("div#login");
+				let hiding = document.querySelector("div#register");
+				showing.setAttribute("class", "login-form");
+				hiding.setAttribute("class", "login-form hide");
+				}
+			);
+			btn = document.querySelector("input#register");
+			btn.addEventListener('click', () => {
+				let showing = document.querySelector("div#register");
+				let hiding = document.querySelector("div#login");
+				showing.setAttribute("class", "login-form");
+				hiding.setAttribute("class", "login-form hide");
+				}
+			);
+			}
+		);
+		</script>
 	</head>
 	<body>
 		<main>
@@ -14,25 +35,28 @@
 				<a href="lecture.html" class="header-button header-text">LECTURES</a>
 				<a href="excercise.html" class="header-button header-text">EXCERCISES</a>
 				<span class="right-side">
-					<a href="login.html" class="header-button header-text">Login</a>
-					<a href="register.html" class="header-button header-text">Register</a>
+					<a href="register.html" class="header-button header-text">Account</a>
 				</span>
 			</header>
-			<article class="center hide">
-				<div class="login-form">
-					<span class="login-item formtext">Register new user</span>
-					<input type="text" placeholder="E-mail address" class="login-item">
-					<input type="text" placeholder="Username" class="login-item">
-					<input type="text" placeholder="Password" class="login-item">
-					<input type="button" value="Register" class="login-item">
-				</div>
-			</article>
 			<article class="center">
-				<div class="login-form">
-					<span class="login-item formtext">Login</span>
-					<input type="text" placeholder="Username" class="login-item">
-					<input type="text" placeholder="Password" class="login-item">
-					<input type="button" value="Login" class="login-item">
+				<div>
+					<header>
+						<input id="register" type="button" value="Register" class="header-button header-text">
+						<input id="login" type="button" value="Login" class="header-button header-text">
+					</header>
+					<div id="register" class="login-form hide">
+						<span class="login-item formtext">Register new user</span>
+						<input type="text" placeholder="E-mail address" class="login-item">
+						<input type="text" placeholder="Username" class="login-item">
+						<input type="text" placeholder="Password" class="login-item">
+						<input type="button" value="Register" class="login-item">
+					</div>
+					<div id="login" class="login-form">
+						<span class="login-item formtext">Login</span>
+						<input type="text" placeholder="Username" class="login-item">
+						<input type="text" placeholder="Password" class="login-item">
+						<input type="button" value="Login" class="login-item">
+					</div>
 				</div>
 			</article>
 		</main>

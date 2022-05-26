@@ -7,7 +7,7 @@ body {
 }
 
 main {
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	background-color: purple;
@@ -48,6 +48,11 @@ article {
 	padding: 1em;
 }
 
+.horizontal {
+	display: flex;
+	flex-direction: row;
+}
+
 .center {
 	display: flex;
 	align-items: center;
@@ -71,4 +76,12 @@ article {
 
 .hide {
 	display: none;
+}
+
+.answer-images {
+	display: inline;
+	margin: 4px;
+	border: 1px solid black;
+	width: 20vw;
+	height: 20vw;
 }
