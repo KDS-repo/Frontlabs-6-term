@@ -1,5 +1,5 @@
 import Home from "./views/Home.js";
-//import Posts from "./views/Posts.js";
+import Lecture from "./views/Lecture.js";
 //import PostView from "./views/PostView.js";
 //import Settings from "./views/Settings.js";
 
