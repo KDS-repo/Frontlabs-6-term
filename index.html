@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			HOME
+		</title>
+		<link rel="stylesheet" href="styles.css">
+		<script>
+		window.addEventListener("load", () => {
+			let space = document.querySelector("a.acc");
+			space.innerHTML = window.sessionStorage.usr
+		})
+		
+		document.addEventListener("DOMContentLoaded", () => {
+			console.log("listener added on load")
+			document.addEventListener("click", event => {
+				if(event.target.dataset.link){
+					//event.preventDefault()
+					console.log(event.target)
+					history.pushState(null, null, event.target.href)
+					
+				}
+			})
+		})
+		</script>
+	</head>
+	<body>
+		<main>
+			<header>
+				<span class="header-text">Post Physics</span>
+				<a href="index.html" class="header-button header-text" data-link="true">HOME</a>
+				<a href="lecture.html" class="header-button header-text" data-link="true">LECTURES</a>
+				<a href="excercise.html" class="header-button header-text" data-link="true">EXCERCISES</a>
+				<span class="right-side">
+					<a href="register.html" class="header-button header-text" data-link="true">Account</a>
+				</span>
+			</header>
+			<article>
+				<span>Welcome to Post Physics</span>
+			</article>
+		</main>
+	</body>
+</html>
