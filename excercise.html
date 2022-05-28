@@ -7,6 +7,12 @@
 		<link rel="stylesheet" href="styles.css">
 		<script>
 		window.addEventListener("load", () => {
+			let space = document.querySelector("a.acc");
+			space.innerHTML = window.sessionStorage.usr
+
+		})
+		
+		window.addEventListener("load", () => {
 			let dragged = null;
 			
 			document.addEventListener("dragstart", event => {
@@ -41,7 +47,7 @@
 				<a href="lecture.html" class="header-button header-text">LECTURES</a>
 				<a href="excercise.html" class="header-button header-text">EXCERCISES</a>
 				<span class="right-side">
-					<a href="register.html" class="header-button header-text">Account</a>
+					<a href="register.html" class="header-button header-text acc">Account</a>
 				</span>
 			</header>
 			<article>

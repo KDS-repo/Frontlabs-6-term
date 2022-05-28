@@ -5,6 +5,12 @@
 			HOME
 		</title>
 		<link rel="stylesheet" href="styles.css">
+		<script>
+		window.addEventListener("load", () => {
+			let space = document.querySelector("a.acc");
+			space.innerHTML = window.sessionStorage.usr
+		})
+		</script>
 	</head>
 	<body>
 		<main>
