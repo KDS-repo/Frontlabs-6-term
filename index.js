@@ -21,10 +21,10 @@ const navigateTo = url => {
 
 const router = async () => {
     const routes = [
-        { path: "/", view: Home },
-        { path: "/lecture", view: Lecture },
-        { path: "/excercise", view: Excercise },
-        { path: "/register", view: Register }
+        { path: "/Frontlabs-6-term/", view: Home },
+        { path: "/Frontlabs-6-term/lecture", view: Lecture },
+        { path: "/Frontlabs-6-term/excercise", view: Excercise },
+        { path: "/Frontlabs-6-term/register", view: Register }
     ];
 
     // Test each route for potential match
