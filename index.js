@@ -42,6 +42,7 @@ const router = async () => {
             route: routes[0],
             result: [location.pathname]
         };
+        console.log(match.result)
     }
 
     const view = new match.route.view(getParams(match));
@@ -55,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.addEventListener("click", e => {
         if (e.target.matches("[data-link]")) {
             e.preventDefault();
+            console.log(e.target.href);
             navigateTo(e.target.href);
         }
     });
