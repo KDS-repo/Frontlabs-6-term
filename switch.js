@@ -1,6 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 let btn = document.querySelector("input#login");
+console.log("IT WORKS")
 
 btn.addEventListener('click', () => {
 	let showing = document.querySelector("div#login");
