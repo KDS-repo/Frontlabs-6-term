@@ -1,7 +1,7 @@
 import Home from "./views/Home.js";
 import Lecture from "./views/Lecture.js";
-//import PostView from "./views/PostView.js";
-//import Settings from "./views/Settings.js";
+import Excercise from "./views/Excercise.js";
+import Register from "./views/Register.js";
 
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
