@@ -54,9 +54,9 @@ article {
 }
 
 .center {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+	margin: auto;
+	width: min-content;
+	height: min-content;
 }
 
 .login-item {
